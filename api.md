@@ -10,8 +10,8 @@ name (string, required) - 카테고리 이름
 creationId (number, required) - 창작물 ID
 title (string, required) - 제목
 description (string, required) - 설명
-dueDate (timestamp, required) - 마감일(ex. 1517081902000)
-writedDate (timestamp, optional) - 작성일(ex. 1517081902000)
+dueDate (timestamp(ms), required) - 마감일(ex. 1517081902000)
+writedDate (timestamp(ms), optional) - 작성일(ex. 1517081902000)
 rewardPoint (double, required) - 보상 포인트
 status (enum, required) - 게시물 상태(PROCEEDING, DEADLINE...)
 anonymity (boolean, required)- 작성자 프로필 익명 여부
