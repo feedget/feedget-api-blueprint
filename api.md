@@ -77,8 +77,8 @@ Todo: 읽음 여부 추가
 ### 창작물 리스트 [GET /creations] 
 #### Request (application/json)
 * Query String
-   * page (number, required)
-   * cursor (number, optional)
+   * page (number, required) - request page number
+   * cursor (number, optional) - List의 마지막 item id
    * category (string, optional)
 
 #### Response 200 (application/json)
@@ -167,8 +167,8 @@ Todo: 읽음 여부 추가
 ### 피드백 리스트 [GET /creations/{creationId}/feedbacks]
 #### Request (application/json)
 * Query String
-   * page (number, required)
-   * cursor (number, required)
+   * page (number, required) - request page number
+   * cursor (number, required) - List의 마지막 item id
 
 #### Response 200 (application/json)
 * Attributes
@@ -240,8 +240,8 @@ Todo: 필요한 정보 추가
 ### 알림 리스트 [GET /notifications]
 #### Request (application/json)
 * Query String
-   * page (number, required)
-   * cursor (number, required)
+   * page (number, required) - request page number
+   * cursor (number, required) - List의 마지막 item id
 
 #### Response 200 (application/json)
 * Attributes
