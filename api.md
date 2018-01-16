@@ -10,10 +10,10 @@ name (string, required) - 카테고리 이름
 creationId (number, required) - 창작물 ID
 title (string, required) - 제목
 description (string, required) - 설명
-dueDate (timestamp, required) - 마감일
-writedDate (timestamp, optional) - 작성일
-rewardPoint (number, required) - 보상 포인트
-status (string, required) - 게시물 상태(PROCEEDING, DEADLINE...)
+dueDate (timestamp, required) - 마감일(ex. 1517081902000)
+writedDate (timestamp, optional) - 작성일(ex. 1517081902000)
+rewardPoint (double, required) - 보상 포인트
+status (enum, required) - 게시물 상태(PROCEEDING, DEADLINE...)
 anonymity (boolean, required)- 작성자 프로필 익명 여부
 feedbackCount (number, required) - 피드백 갯수
 wroteFeedback (boolean, optional) - 피드백 작성 여부
@@ -25,7 +25,7 @@ contents (Content List, required) - 컨텐츠
 ```
 userId (string, required) - 유저 ID
 nickname (string, required) - 닉네임
-grade (string, required) - 등급(GOLD, SILVER, BRONZE)
+grade (enum, required) - 등급(GOLD, SILVER, BRONZE)
 ```
 
 ## Content
@@ -83,7 +83,9 @@ Todo: 읽음 여부 추가
 
 #### Response 200 (application/json)
 * Attributes
-   * creations (Creation List, required)
+   * status (number, required)
+   * message (string, required)
+   * list (Creation List, required)
    * nextPage (number, required)
 
 
@@ -93,8 +95,10 @@ Todo: 읽음 여부 추가
 
 #### Response 200 (application/json)
 * Attributes
-   * creation (Creation, required)
-
+   * status (number, required)
+   * message (string, required)
+   * item (Creation, required)
+   
 
 ### 창작물 추가 [POST /creations] 
 #### Request (application/json)
@@ -103,7 +107,7 @@ Todo: 읽음 여부 추가
    * description (string, required) - 설명
    * category (string, required) - 카테고리
    * anonymity (boolean, required) - 작성자 프로필 익명 여부
-   * rewardPoint (number, required) - 보상 포인트
+   * rewardPoint (double, required) - 보상 포인트
 
 #### Response 201 (application/json)
 * Attributes
@@ -116,7 +120,7 @@ Todo: 읽음 여부 추가
    * description (string, optional) - 설명
    * category (string, optional) - 카테고리
    * anonymity (boolean, optional) - 작성자 프로필 익명 여부
-   * rewardPoint (number, optional) - 보상 포인트
+   * rewardPoint (double, optional) - 보상 포인트
 
 #### Response 200 (application/json)
 * Attributes
@@ -164,11 +168,13 @@ Todo: 읽음 여부 추가
 #### Request (application/json)
 * Query String
    * page (number, required)
-   * cursor (number, )required
+   * cursor (number, required)
 
 #### Response 200 (application/json)
 * Attributes
-   * feedbacks (Feedback List, required)
+   * status (number, required)
+   * message (string, required)
+   * list (Feedback List, required)
    * nextPage (number, required)
 
 
@@ -239,5 +245,7 @@ Todo: 필요한 정보 추가
 
 #### Response 200 (application/json)
 * Attributes
-   * notifications (Notification List, required)
+   * status (number, required)
+   * message (string, required)
+   * list (Notification List, required)
    * nextPage (number, required)
