@@ -39,9 +39,9 @@ url (string, required) - URL
 feedbackId (number, required) -  피드백 ID
 description (string, required) - 피드백 내용
 anonymity (boolean, required)- 작성자 프로필 익명 여부
+selection (boolean, required)- 피드백 채택 여부
 writer (User, required) - 작성자
 contents (Content List, required) - 컨텐츠
-// Todo: 채택 여부 추가
 ```
 
 ## Notification - Todo
@@ -78,7 +78,7 @@ Todo: 읽음 여부 추가
 #### Request (application/json)
 * Query String
    * page (number, required) - request page number
-   * cursor (number, optional) - List의 마지막 item id
+   * cursor (number, optional) - List의 마지막 item ID
    * category (string, optional)
 
 #### Response 200 (application/json)
@@ -167,15 +167,15 @@ Todo: 읽음 여부 추가
 ### 피드백 리스트 [GET /creations/{creationId}/feedbacks]
 #### Request (application/json)
 * Query String
-   * page (number, required) - request page number
-   * cursor (number, required) - List의 마지막 item id
+   * Todo: 추후에 추가. page (number, required) - request page number
+   * Todo: 추후에 추가. cursor (number, required) - List의 마지막 item ID
 
 #### Response 200 (application/json)
 * Attributes
    * status (number, required)
    * message (string, required)
    * list (Feedback List, required)
-   * nextPage (number, required)
+   * Todo: 추후에 추가. nextPage (number, required)
 
 
 ### 피드백 추가 [POST /creations/{creationId}/feedbacks]
@@ -241,7 +241,7 @@ Todo: 필요한 정보 추가
 #### Request (application/json)
 * Query String
    * page (number, required) - request page number
-   * cursor (number, required) - List의 마지막 item id
+   * cursor (number, required) - List의 마지막 item ID
 
 #### Response 200 (application/json)
 * Attributes
