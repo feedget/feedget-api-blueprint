@@ -111,7 +111,9 @@ Todo: 읽음 여부 추가
 
 #### Response 201 (application/json)
 * Attributes
-
+   * status (number, required)
+   * message (string, required)
+   * item (number, required) - creation ID
 
 ### 창작물 수정 [PUT /creations/{creationId}]
 #### Request (application/json)
