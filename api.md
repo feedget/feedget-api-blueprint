@@ -53,6 +53,12 @@ creationId (number, required) - 창작물 ID(창작물로 이동하기 위해)
 Todo: 읽음 여부 추가
 ```
 
+## SignIn
+```
+accessToken (string, required) - Access Token
+refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
+```
+
 
 <br/>
 ---
@@ -200,33 +206,39 @@ Todo: 읽음 여부 추가
 
 ---
 
-## 유저 - Todo
+## 유저
 
-### 로그인 [POST /users/register]
+### 로그인 [POST /sign-in]
 #### Request (application/json)
 * Attributes
-   * oAuthToken (string, required)
-   * oAuthType (string, required)
-      * FB...  
-Todo: 필요한 정보 추가
+   * realName (string, required)
+   * nickname (string, required)
+   * email (string, required)
+   * oauthToken (string, required)
+   * oauthType (enum, required)
+      * FB...
 
 #### Response 200 (application/json)
-* Attributes
-   * accessToken (string, required)
+* Attributes   
+   * status (number, required)
+   * message (string, required)
+   * item (SignIn, required)
 
 
 ### 닉네임 수정 [PATCH /users/nickname]
 
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * nickname (string, required)
 
 #### Response 200 (application/json)
 * Attributes
-   * accessToken (string, required)
 
 
-### cloud message token 갱신 [PATCH /devices/cloud-messaging]
+### cloud message token 갱신 [PATCH /devices/cloud-messaging] - Todo
 #### Request (application/json)
 * Attributes
    * cloudMsgRegToken (string, required)
