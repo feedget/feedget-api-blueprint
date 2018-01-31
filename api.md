@@ -189,7 +189,7 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 ### 피드백 추가 [POST /creations/{creationId}/feedbacks]
 #### Request (application/json)
 * Attributes
-   * description (string, required) - 피드백 내용
+   * content (string, required) - 피드백 내용
    * anonymity (boolean, required) - 작성자 프로필 익명 여부
 
 #### Response 201 (application/json)
