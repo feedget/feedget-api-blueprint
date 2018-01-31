@@ -172,7 +172,7 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ## 피드백
 
-### 피드백 리스트 [GET /creations/{creationId}/feedbacks]
+### 피드백 리스트 [GET /creations/{creationId}/feedback]
 #### Request (application/json)
 * Query String
    * Todo: 추후에 추가. page (number, required) - request page number
@@ -186,7 +186,7 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
    * Todo: 추후에 추가. nextPage (number, required)
 
 
-### 피드백 추가 [POST /creations/{creationId}/feedbacks]
+### 피드백 추가 [POST /creations/{creationId}/feedback]
 #### Request (application/json)
 * Attributes
    * content (string, required) - 피드백 내용
@@ -196,7 +196,7 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 * Attributes
 
 
-### 피드백 삭제 [DELETE /creations/{creationId}/feedbacks/{feedbackId}]
+### 피드백 삭제 [DELETE /creations/{creationId}/feedback/{feedbackId}]
 #### Request (application/json)
 * Attributes
   
