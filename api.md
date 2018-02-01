@@ -37,7 +37,7 @@ url (string, required) - URL
 ## Feedback - Todo
 ```
 feedbackId (number, required) -  피드백 ID
-description (string, required) - 피드백 내용
+content (string, required) - 피드백 내용
 anonymity (boolean, required)- 작성자 프로필 익명 여부
 selection (boolean, required)- 피드백 채택 여부
 writer (User, required) - 작성자
