@@ -82,6 +82,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물 리스트 [GET /creations] 
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Query String
    * page (number, required) - request page number
    * cursor (number, optional) - List의 마지막 item ID
@@ -97,6 +100,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물 상세조회 [GET /creations/{creationId}]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Query String
 
 #### Response 200 (application/json)
@@ -108,6 +114,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물 추가 [POST /creations] 
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * title (string, required) - 제목
    * description (string, required) - 설명
@@ -123,6 +132,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물 수정 [PUT /creations/{creationId}]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * title (string, optional) - 제목
    * description (string, optional) - 설명
@@ -136,6 +148,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물 삭제 [DELETE /creations/{creationId}]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Query String
 
 #### Response 200 (application/json)
@@ -148,6 +163,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 창작물의 컨텐츠 추가 [POST creations/{creationId}/contents]
 #### Request (multipart/form-data)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * type (string, required) - 컨텐츠 타입
       * IMAGE
@@ -160,6 +178,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 ### 창작물의 컨텐츠 삭제 [DELETE /creations/{creationId}/contents]
 
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Query String
    * contentId (string List, required)
 
@@ -174,6 +195,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 피드백 리스트 [GET /creations/{creationId}/feedbacks]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Query String
    * Todo: 추후에 추가. page (number, required) - request page number
    * Todo: 추후에 추가. cursor (number, required) - List의 마지막 item ID
@@ -188,6 +212,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 피드백 추가 [POST /creations/{creationId}/feedbacks]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * description (string, required) - 피드백 내용
    * anonymity (boolean, required) - 작성자 프로필 익명 여부
@@ -198,6 +225,9 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ### 피드백 삭제 [DELETE /creations/{creationId}/feedbacks/{feedbackId}]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
   
 #### Response 200 (application/json)
@@ -249,7 +279,7 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 
 ---
 
-## 알림
+## 알림 - Todo
 
 ### 알림 리스트 [GET /notifications]
 #### Request (application/json)
