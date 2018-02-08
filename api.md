@@ -34,14 +34,15 @@ contentId (number, optional) - 컨텐츠 ID
 url (string, required) - URL
 ```
 
-## Feedback - Todo
+## Feedback
 ```
 feedbackId (number, required) -  피드백 ID
 content (string, required) - 피드백 내용
-anonymity (boolean, required)- 작성자 프로필 익명 여부
-selection (boolean, required)- 피드백 채택 여부
+anonymity (boolean, required) - 작성자 프로필 익명 여부
+selection (boolean, required) - 피드백 채택 여부
 writer (User, required) - 작성자
 contents (Content List, required) - 컨텐츠
+selectionComment (string, optional) - 피드백 채택 의견
 ```
 
 ## Notification - Todo
@@ -60,7 +61,6 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 ```
 
 
-<br/>
 ---
 
 # API
@@ -232,7 +232,16 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
   
 #### Response 200 (application/json)
 * Attributes
-  
+
+
+### 피드백 채택 [PUT /creations/{creationId}/feedback/{feedbackId}/selection]
+#### Request (application/json)
+* Attributes
+   * selectionComment (string, required) - 채택 의견
+
+#### Response 200 (application/json)
+* Attributes
+
 
 ---
 
