@@ -42,7 +42,7 @@ anonymity (boolean, required) - 작성자 프로필 익명 여부
 selection (boolean, required) - 피드백 채택 여부
 writer (User, required) - 작성자
 contents (Content List, required) - 컨텐츠
-selectionComment (string, optional) - 피드백 채택 의견
+selectionComment (string, required) - 피드백 채택 의견
 ```
 
 ## Notification - Todo
