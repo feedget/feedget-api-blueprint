@@ -26,6 +26,9 @@ contents (Content List, required) - 컨텐츠
 userId (string, required) - 유저 ID
 nickname (string, required) - 닉네임
 grade (enum, required) - 등급(GOLD, SILVER, BRONZE)
+currentPointAmount (double, optional) - 현재 보유 포인트 
+feedbackSelectionRate (double, optional) - 피드백 채택률
+creationDeadlineRate" (double, optional) - 창작물 마감률
 ```
 
 ## Content
@@ -263,6 +266,19 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
    * message (string, required)
    * item (SignIn, required)
 
+### 유저 정보 조회 [GET /users/{uuid}]
+* {uuid}
+   * me - 자기 자신
+   * 32자 uuid - 다른 유저
+
+#### Request (application/json)
+* Attributes
+
+#### Response 200 (application/json)
+* Attributes   
+   * status (number, required)
+   * message (string, required)
+   * item (User, required)
 
 ### 닉네임 수정 [PATCH /users/nickname]
 
