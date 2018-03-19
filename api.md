@@ -28,7 +28,7 @@ nickname (string, required) - 닉네임
 grade (enum, required) - 등급(GOLD, SILVER, BRONZE)
 currentPointAmount (double, optional) - 현재 보유 포인트 
 feedbackSelectionRate (double, optional) - 피드백 채택률
-creationDeadlineRate" (double, optional) - 창작물 마감률
+creationDeadlineRate (double, optional) - 창작물 마감률
 ```
 
 ## Content
@@ -293,8 +293,11 @@ refreshToken (string, required) - Refresh Token(Access Token 갱신을 위해)
 * Attributes
 
 
-### cloud message token 갱신 [PATCH /devices/cloud-messaging] - Todo
+### cloud message token 등록/갱신 [PATCH /devices/cloud-messaging]
 #### Request (application/json)
+* Header
+   * authorization (string, required) - Bearer <Access Token>
+
 * Attributes
    * cloudMsgRegToken (string, required)
 
